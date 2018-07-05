@@ -5,8 +5,8 @@
 VAGRANTFILE_API_VERSION = "2"
 
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|  
-  config.vm.box = "jesse"  
-  config.vm.box_url = "http://terminal-labs-vagrant-boxes.s3.amazonaws.com/tl_debjesse64.box"
+  config.vm.box = "jesse"
+  config.vm.box = "debian/jessie64"
 
   config.vm.provision :salt do |salt|
     salt.bootstrap_options = "-P"
