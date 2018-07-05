@@ -3,5 +3,7 @@ base:
     - match: grain
     - devbox
     - nginx
+    - nginx.wordpress_config
     - mysql
     - php
+    - wordpress
