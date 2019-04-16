@@ -1,2 +1,1 @@
-source env/bin/activate
-pytest
+echoe "test"
