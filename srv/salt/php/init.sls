@@ -1,30 +1,31 @@
+update_apt_for_php:
+  cmd.run:
+    - name: sudo apt install software-properties-common; sudo add-apt-repository ppa:ondrej/php; sudo apt update; sudo apt -y upgrade
+    - cwd: /home/{{ grains['user'] }}
+    - user: {{ grains['user'] }}
+
 install_php:
   pkg.installed:
     - pkgs:
-      - php-pear
-      - php5
-      - php5-curl
-      - php5-gd
-      - php5-fpm
-      - php5-mysql
-      - php5-intl
-      - php5-imagick
-      - php5-imap
-      - php5-mcrypt
-      - php5-memcache
-      - php5-pspell
-      - php5-recode
-      - php5-snmp
-      - php5-sqlite
-      - php5-tidy
-      - php5-xmlrpc
-      - php5-xsl
+      - php5.6
+      - php5.6-curl
+      - php5.6-gd
+      - php5.6-fpm
+      - php5.6-mysql
+      - php5.6-intl
+      - php5.6-mcrypt
+      - php5.6-pspell
+      - php5.6-recode
+      - php5.6-snmp
+      - php5.6-tidy
+      - php5.6-xmlrpc
+      - php5.6-xsl
 
-/etc/php5/fpm/php.ini:
+/etc/php/5.6/fpm/php.ini:
   file.managed:
     - source: salt://php/php.ini
     - user: {{ grains['user'] }}
     - group: {{ grains['user'] }}
 
-sudo service php5-fpm restart:
+sudo service php5.6-fpm restart:
   cmd.run
