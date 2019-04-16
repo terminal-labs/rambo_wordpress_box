@@ -1,6 +1,6 @@
 # Notes
 
-spins up wordpress in debian jessie using salt
+spins up wordpress in ubuntu 18.04 using salt
 
 # Development
 
