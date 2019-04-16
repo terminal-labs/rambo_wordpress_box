@@ -1,1 +1,1 @@
-echoe "test"
+echo "test"
