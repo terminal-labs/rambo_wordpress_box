@@ -1,7 +1,7 @@
 setup_devbox:
   pkg.installed:
     - pkgs:
-      - libjpeg62-turbo-dev
+      - libjpeg-turbo8-dev
       - wget
       - curl
       - emacs
