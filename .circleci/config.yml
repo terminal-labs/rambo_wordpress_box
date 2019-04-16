@@ -1,0 +1,27 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: circleci/buildpack-deps:18.04
+
+    working_directory: ~/repo
+
+    steps:
+      - checkout
+
+      - run:
+          name: Install deps
+          command: |
+            sudo bash maintenance/install_deps.sh
+      - run:
+          name: Create venv
+          command: |
+            sudo bash maintenance/create_venv.sh
+      - run:
+          name: Install app
+          command: |
+            sudo bash maintenance/install_app.sh
+      - run:
+          name: Run tests
+          command: |
+            sudo bash maintenance/test.sh
