@@ -3,9 +3,9 @@ USER=$(/usr/bin/id -run)
 mkdir -p /home/"$USER"/.ssh
 rm /home/"$USER"/.ssh/*
 
-sudo ssh-keygen -t rsa -N "" -f /home/"$USER"/.ssh/id_rsa 
-sudo echo -e "Host github.com\n\tStrictHostKeyChecking no\n\tUserKnownHostsFile=/dev/null\n" >  /home/"$USER"/.ssh/config
-sudo ssh-keyscan github.com >> /home/"$USER"/.ssh/known_hosts
+ssh-keygen -t rsa -N "" -f /home/"$USER"/.ssh/id_rsa 
+echo -e "Host github.com\n\tStrictHostKeyChecking no\n\tUserKnownHostsFile=/dev/null\n" > /home/"$USER"/.ssh/config
+ssh-keyscan github.com >> /home/"$USER"/.ssh/known_hosts
 
 sudo chown -R "$USER" /home/"$USER"/.ssh
 sudo chgrp -R "$USER" /home/"$USER"/.ssh
