@@ -1,4 +1,4 @@
-mkdir -p  ~/.ssh
+mkdir -p  /root/.ssh
 ssh-keygen -t rsa -N ""
 echo -e "Host github.com\n\tStrictHostKeyChecking no\n\tUserKnownHostsFile=/dev/null\n" >  /etc/ssh/ssh_config
 echo -e "Host github.com\n\tStrictHostKeyChecking no\n\tUserKnownHostsFile=/dev/null\n" >  /root/.ssh/config
