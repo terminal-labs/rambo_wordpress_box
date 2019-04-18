@@ -14,6 +14,14 @@ jobs:
           command: |
             sudo bash maintenance/install_deps.sh
       - run:
+          name: Install salt
+          command: |
+            sudo bash maintenance/install_salt_open.sh
+      - run:
+          name: Run salt
+          command: |
+            sudo bash maintenance/run_salt.sh      
+      - run:
           name: Run tests
           command: |
             sudo bash maintenance/test.sh
