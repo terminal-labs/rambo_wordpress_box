@@ -13,3 +13,14 @@ sudo chmod 644 /home/circleci/.ssh/known_hosts
 sudo chmod 644 /home/circleci/.ssh/config
 sudo chmod 600 /home/circleci/.ssh/id_rsa
 sudo chmod 644 /home/circleci/.ssh/id_rsa.pub
+
+sudo cp -a /home/circleci/.ssh/. /root/.ssh/
+
+sudo chown -R root /root/.ssh
+sudo chgrp -R root /root/.ssh
+sudo chmod 400 /root/.ssh
+sudo chmod 400 /root/.ssh/authorized_keys
+sudo chmod 400 /root/.ssh/known_hosts
+sudo chmod 400 /root/.ssh/config
+sudo chmod 400 /root/.ssh/id_rsa
+sudo chmod 400 /root/.ssh/id_rsa.pub
