@@ -1,4 +1,4 @@
-${USER:=$(/usr/bin/id -run)}:$USER
+${USER:=$(/usr/bin/id -run)}
 
 mkdir -p /home/"$USER"/.ssh
 rm /home/"$USER"/.ssh/*
