@@ -8,5 +8,5 @@ cd /home/circleci/.ssh
 rm *
 sudo chmod 700 ~/.ssh
 sudo chmod -R 600 ~/.ssh/
-sudo chmod -R 600 ~/.ssh/id_rsa
-sudo chmod -R 644 ~/.ssh/id_rsa.pub
+sudo chmod -R 600 /home/circleci/.ssh/id_rsa
+sudo chmod -R 644 /home/circleci/.ssh/id_rsa.pub
