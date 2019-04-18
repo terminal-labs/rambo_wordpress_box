@@ -15,7 +15,7 @@ jobs:
       - run:
           name: Key scan
           command: |
-            ssh-keyscan -t rsa github.com | ssh-keygen -lf -   
+            ssh-keyscan -t rsa github.com  >> ~/.ssh/known_hosts      
       - run:
           name: Install deps
           command: |
