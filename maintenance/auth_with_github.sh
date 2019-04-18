@@ -5,6 +5,9 @@ chmod 600  ~/.ssh
 ssh-keyscan -Ht rsa github.com >>  ~/.ssh/known_hosts
 cat  ~/.ssh/config
 
+ssh-keyscan github.com > testhost.ssh-keyscan
+cat testhost.ssh-keyscan
+
 set -e
 
 # Workaround old docker images with incorrect $HOME
