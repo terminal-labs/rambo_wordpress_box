@@ -11,7 +11,7 @@ jobs:
       - run:
           name: Auth with github
           command: |
-            sudo bash maintenance/auth_with_github.sh
+            bash maintenance/auth_with_github.sh
       - run:
           name: Install deps
           command: |
