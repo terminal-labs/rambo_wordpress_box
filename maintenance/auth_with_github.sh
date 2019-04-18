@@ -8,4 +8,5 @@ sudo chmod 700 ~/.ssh
 sudo chmod -R 600 ~/.ssh/
 sudo chmod -R 600 /home/circleci/.ssh/id_rsa
 sudo chmod -R 644 /home/circleci/.ssh/id_rsa.pub
+cd ~
 git clone https://github.com/pallets/flask.git
