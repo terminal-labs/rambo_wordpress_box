@@ -1,5 +1,5 @@
 mkdir -p  ~/.ssh
-ssh-keygen -t rsa -N ""
+ssh-keygen -t rsa -N "" -f /home/circleci/.ssh/id_rsa
 sudo echo -e "Host github.com\n\tStrictHostKeyChecking no\n\tUserKnownHostsFile=/dev/null\n" >  ~/.ssh/config
 sudo ssh-keyscan github.com >> ~/.ssh/known_hosts
 sudo chmod 700 ~/.ssh
