@@ -4,3 +4,4 @@ chmod 600 ~/.ssh/config
 ssh-keyscan -Ht rsa github.com >> ~/.ssh/known_hosts
 cat ~/.ssh/known_hosts
 cat ~/.ssh/config
+ssh -T git@github.com
