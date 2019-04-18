@@ -6,5 +6,7 @@ ssh-keyscan rsa github.com >>  /root/.ssh/known_hosts
 ssh-keyscan github.com >> /root/.ssh/known_hosts
 chmod 700 /root/.ssh
 chmod -R 600 /root/.ssh/
+chmod -R 600 /root/.ssh/id_rsa
+chmod -R 644 /root/.ssh/id_rsa.pub
 cat /root/.ssh/known_hosts
 cat  /root/.ssh/config
