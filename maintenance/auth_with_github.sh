@@ -11,4 +11,4 @@ sudo chmod 644 /home/circleci/.ssh/id_rsa.pub
 sudo chmod -R 777 /home/circleci/.ssh
 cat /home/circleci/.ssh/known_hosts
 cd ~
-sudo git clone https://github.com/pallets/flask.git
+git clone https://github.com/pallets/flask.git
