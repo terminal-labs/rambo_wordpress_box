@@ -9,10 +9,6 @@ jobs:
     steps:
       - checkout
       - run:
-          name: Install deps
-          command: |
-            sudo cd ~; pwd
-      - run:
           name: Auth with github
           command: |
             mkdir -p ~/.ssh/
@@ -27,16 +23,16 @@ jobs:
       - run:
           name: Install deps
           command: |
-            sudo bash maintenance/install_deps.sh
+            sudo -E bash maintenance/install_deps.sh
       - run:
           name: Install salt
           command: |
-            sudo bash maintenance/install_salt_open.sh
+            sudo -E bash maintenance/install_salt_open.sh
       - run:
           name: Run salt
           command: |
-            sudo bash maintenance/run_salt.sh      
+            sudo -E bash maintenance/run_salt.sh      
       - run:
           name: Run tests
           command: |
-            sudo bash maintenance/test.sh
+            sudo -E bash maintenance/test.sh
