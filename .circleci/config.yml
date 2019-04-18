@@ -8,7 +8,10 @@ jobs:
 
     steps:
       - checkout
-
+      - add_ssh_keys
+      - run:
+          name: Keyscan Github
+          command: ssh-keyscan -H github.com >> ~/.ssh/known_hosts      
       - run:
           name: Install deps
           command: |
