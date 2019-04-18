@@ -11,7 +11,7 @@ jobs:
       - run:
           name: Keyscan github
           command: |
-            mkdir "~/.ssh/known_hosts"            
+            mkdir "~/.ssh"            
             ssh-keygen -f "~/.ssh/known_hosts" -R github.com
       - run:
           name: Install deps
