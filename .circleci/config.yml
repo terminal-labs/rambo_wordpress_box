@@ -7,12 +7,7 @@ jobs:
     working_directory: ~/repo
 
     steps:
-      - checkout
-      - add_ssh_keys:
-          fingerprints:
-            - "16:27:ac:a5:76:28:2d:36:63:1b:56:4d:eb:df:a6:48"
-            - "SHA256:nThbg6kXUpJWGl7E1IGOCspRomTxdCARLviKw6E5SY8"
-            - "cb:4a:42:66:06:08:62:d2:40:18:01:56:af:47:e3:d0"     
+      - checkout    
       - run:
           name: Auth with github
           command: |
@@ -20,6 +15,11 @@ jobs:
             echo -e "Host github.com\n\tStrictHostKeyChecking no\n\tUserKnownHostsFile /dev/null\n" > ~/.ssh/config
             chmod 600 ~/.ssh/config
             ssh-keyscan -Ht rsa github.com >> ~/.ssh/known_hosts
+      - add_ssh_keys:
+          fingerprints:
+            - "16:27:ac:a5:76:28:2d:36:63:1b:56:4d:eb:df:a6:48"
+            - "SHA256:nThbg6kXUpJWGl7E1IGOCspRomTxdCARLviKw6E5SY8"
+            - "cb:4a:42:66:06:08:62:d2:40:18:01:56:af:47:e3:d0"
       - run:
           name: Install deps
           command: |
