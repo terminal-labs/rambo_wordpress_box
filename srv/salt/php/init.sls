@@ -1,6 +1,6 @@
 update_apt_for_php:
   cmd.run:
-    - name: sudo apt install software-properties-common; sudo add-apt-repository ppa:ondrej/php; sudo apt update; sudo apt -y upgrade
+    - name: sudo apt -y install software-properties-common; sudo add-apt-repository -y ppa:ondrej/php; sudo apt -y update; sudo apt -y upgrade
     - cwd: /home/{{ grains['user'] }}
     - user: {{ grains['user'] }}
 
