@@ -11,28 +11,20 @@ jobs:
       - run:
           name: Auth with github
           command: |
-            mkdir -p ~/.ssh/
-            echo -e "Host github.com\n\tStrictHostKeyChecking no\n\tUserKnownHostsFile /dev/null\n" > ~/.ssh/config
-            chmod 600 ~/.ssh/config
-            ssh-keyscan -Ht rsa github.com >> ~/.ssh/known_hosts
-      - add_ssh_keys:
-          fingerprints:
-            - "16:27:ac:a5:76:28:2d:36:63:1b:56:4d:eb:df:a6:48"
-            - "SHA256:nThbg6kXUpJWGl7E1IGOCspRomTxdCARLviKw6E5SY8"
-            - "cb:4a:42:66:06:08:62:d2:40:18:01:56:af:47:e3:d0"
+            sudo bash maintenance/auth_with_github.sh
       - run:
           name: Install deps
           command: |
-            sudo -E bash maintenance/install_deps.sh
+            sudo bash maintenance/install_deps.sh
       - run:
           name: Install salt
           command: |
-            sudo -E bash maintenance/install_salt_open.sh
+            sudo bash maintenance/install_salt_open.sh
       - run:
           name: Run salt
           command: |
-            sudo -E bash maintenance/run_salt.sh      
+            sudo bash maintenance/run_salt.sh
       - run:
           name: Run tests
           command: |
-            sudo -E bash maintenance/test.sh
+            sudo bash maintenance/test.sh
