@@ -8,7 +8,7 @@ cat  ~/.ssh/config
 ssh-keyscan github.com > testhost.ssh-keyscan
 cat testhost.ssh-keyscan
 ssh-keygen -lf testhost.ssh-keyscan -E sha256
-ssh -o FingerprintHash=sha256 github.org
+ssh -o FingerprintHash=sha256 github.com
 
 set -e
 
