@@ -14,8 +14,8 @@ sudo cp -a /home/circleci/.ssh/. /root/.ssh/
 
 sudo chown -R root /root/.ssh
 sudo chmod 700 /root/.ssh/id_rsa
-sudo chmod 600 /root/.ssh/id_rsa
-sudo chmod 644 /root/.ssh/id_rsa.pub
+sudo chmod 400 /root/.ssh/id_rsa
+sudo chmod 444 /root/.ssh/id_rsa.pub
 
 cd ~
 pwd
