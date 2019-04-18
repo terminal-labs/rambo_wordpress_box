@@ -8,6 +8,9 @@ jobs:
 
     steps:
       - checkout
+      - add_ssh_keys:
+          fingerprints:
+            - "cb:4a:42:66:06:08:62:d2:40:18:01:56:af:47:e3:d0"
       - run:
           name: Install deps
           command: |
