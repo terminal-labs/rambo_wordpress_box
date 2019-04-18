@@ -6,6 +6,7 @@ sudo echo -e "Host github.com\n\tStrictHostKeyChecking no\n\tUserKnownHostsFile=
 sudo ssh-keyscan github.com >> /home/circleci/.ssh/known_hosts
 
 sudo chown -R circleci /home/circleci/.ssh
+sudo chgrp -R circleci /home/circleci/.ssh
 sudo chmod 700 /home/circleci/.ssh
 sudo chmod 600 /home/circleci/.ssh/id_rsa
 sudo chmod 644 /home/circleci/.ssh/id_rsa.pub
