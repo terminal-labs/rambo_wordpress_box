@@ -27,5 +27,9 @@ install_php:
     - user: {{ grains['user'] }}
     - group: {{ grains['user'] }}
 
+create_dir_for_phpfpm_sock:
+  file.directory:
+    - name: /run/php
+
 sudo service php5.6-fpm restart:
   cmd.run
