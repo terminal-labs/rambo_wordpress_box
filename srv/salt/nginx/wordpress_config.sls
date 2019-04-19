@@ -10,6 +10,7 @@
     - name: /etc/nginx/sites-enabled/default
 
 .nginx_restart:
-  module.run:
-    - name: service.restart
-    - m_name: nginx
+  cmd.run:
+    - name: sudo service nginx restart    
+    - cwd: /home/{{ grains['user'] }}
+    - user: {{ grains['user'] }}
