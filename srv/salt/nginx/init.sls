@@ -3,6 +3,9 @@
 .nginx_install:
   pkg.installed:
     - name: nginx-full
-  service.running:
-    - name: nginx
-    - enable: True
+
+.nginx_start:
+  cmd.run:
+    - name: sudo systemctl start nginx    
+    - cwd: /home/{{ grains['user'] }}
+    - user: {{ grains['user'] }}
