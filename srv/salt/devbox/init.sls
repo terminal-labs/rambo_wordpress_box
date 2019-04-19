@@ -4,6 +4,7 @@ setup_devbox:
       - libjpeg-turbo8-dev
       - wget
       - curl
+      - rsync
       - emacs
 
 modify_bashrc:
