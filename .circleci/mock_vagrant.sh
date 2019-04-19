@@ -1,3 +1,4 @@
+useradd -m vagrant
 mkdir -p /home/vagrant
 touch /home/vagrant/.bashrc
 
