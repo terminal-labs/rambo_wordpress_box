@@ -4,7 +4,7 @@ jobs:
     docker:
       - image: circleci/buildpack-deps:18.04
 
-    working_directory: /vagrant
+    working_directory: ~/repo
 
     steps:
       - checkout
