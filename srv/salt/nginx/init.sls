@@ -6,6 +6,6 @@
 
 .nginx_start:
   cmd.run:
-    - name: sudo systemctl start nginx    
+    - name: sudo service nginx start    
     - cwd: /home/{{ grains['user'] }}
     - user: {{ grains['user'] }}
