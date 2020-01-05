@@ -11,4 +11,4 @@ download_python_environment_manager:
 	fi
 
 create: download_python_environment_manager
-	@sudo bash .tmp/python-environment-manager-master/maintenance/vagrant_saltstates/build.sh (SUDO_USER)
+	@sudo bash .tmp/python-environment-manager-master/maintenance/vagrant_saltstates/build.sh $(SUDO_USER)
