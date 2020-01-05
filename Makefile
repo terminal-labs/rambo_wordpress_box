@@ -7,7 +7,7 @@ download_python_environment_manager:
 		sudo rm -rf maintenance; \
 		sudo su -m $(SUDO_USER) -c "mkdir -p .tmp"; \
 		sudo su -m $(SUDO_USER) -c "cd .tmp; wget https://github.com/terminal-labs/python-environment-manager/archive/master.zip"; \
-		sudo su -m $(SUDO_USER) -c "cd .tmp; unzip -qq master.zip";
+		sudo su -m $(SUDO_USER) -c "cd .tmp; unzip -qq master.zip"; \
 	fi
 
 create: download_python_environment_manager
