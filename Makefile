@@ -12,5 +12,5 @@ download_python_environment_manager:
 		sudo chown $(SUDO_USER) create.sh; \
 	fi
 
-build: download_python_environment_manager
+create: download_python_environment_manager
 	@sudo bash .tmp/python-environment-manager-master/maintenance/vagrant_saltstates/build.sh (SUDO_USER)
